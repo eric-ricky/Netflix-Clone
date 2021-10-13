@@ -12,7 +12,7 @@ const Header = () => {
         </div>
 
         <div className="btn">
-          <a href="https://thebreld.co.ke" target="_blank">
+          <a href="https://thebreld.co.ke" target="_blank" rel="noreferrer">
             Sign in
           </a>
         </div>

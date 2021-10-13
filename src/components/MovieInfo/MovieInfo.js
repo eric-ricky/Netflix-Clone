@@ -5,7 +5,6 @@ import ImageThumb from "../ImageThumb/ImageThumb";
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 import NoImage from "../../images/no_image.jpg";
 import { Wrapper, Content, Text } from "./MovieInfo.styles";
-import Movie from "../../pages/Movie";
 
 const MovieInfo = ({ movie }) => {
   console.log(movie);
@@ -44,6 +43,7 @@ const MovieInfo = ({ movie }) => {
             className="watch"
             href={movie.homepage ? movie.homepage : "https://thebreld.co.ke"}
             target="_blank"
+            rel="noreferrer"
           >
             Watch
           </a>

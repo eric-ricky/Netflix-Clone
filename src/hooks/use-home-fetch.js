@@ -38,15 +38,15 @@ export const useHomeFetch = () => {
 
   //   initial render and search
   useEffect(() => {
-    // if (!searchTerm) {
-    //   const sessionState = isPersistedState("homeState");
+    if (!searchTerm) {
+      const sessionState = isPersistedState("homeState");
 
-    //   if (sessionState) {
-    //     console.log("from session storage");
-    //     setState(sessionState);
-    //     return;
-    //   }
-    // }
+      if (sessionState) {
+        console.log("from session storage");
+        setState(sessionState);
+        return;
+      }
+    }
 
     console.log("from api direct");
     setState(initialState);
@@ -62,9 +62,9 @@ export const useHomeFetch = () => {
   }, [isLoadingMore, state.page, searchTerm]);
 
   // Write to sessionStorage
-  // useEffect(() => {
-  //   if (!searchTerm) sessionStorage.setItem("homeState", JSON.stringify(state));
-  // }, [searchTerm, state]);
+  useEffect(() => {
+    if (!searchTerm) sessionStorage.setItem("homeState", JSON.stringify(state));
+  }, [searchTerm, state]);
 
   return { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore };
 };

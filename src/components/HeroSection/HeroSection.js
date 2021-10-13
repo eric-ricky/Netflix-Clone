@@ -1,8 +1,7 @@
 import React from "react";
-import { Search, Title, Wrapper } from "./HeroSection.styles";
+import { Title, Wrapper } from "./HeroSection.styles";
 
 import Image from "../../images/netflixImage.jpg";
-import SearchBar from "../SearchBar/SearchBar";
 
 const HeroSection = () => {
   return (
